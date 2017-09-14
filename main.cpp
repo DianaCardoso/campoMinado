@@ -1,4 +1,5 @@
-/*Criado por Diana Macena Cardoso dos Santos
+/* 
+Versao 2: Diana Cardoso
 Bacharelado em Ciência da Computaçao
 */
 
@@ -28,11 +29,15 @@ int main(){
 	while(1){
 		
 		mostragabarito = 0;
-		while(mostragabarito != 's' && mostragabarito != 'S' && mostragabarito != 'n' && mostragabarito != 'N'){
+		//while(mostragabarito != 's' && mostragabarito != 'S' && mostragabarito != 'n' && mostragabarito != 'N'){
 			printf("Voce deseja mostrar o gabarito? (s/N)\n");
 			fflush(stdin);
 			scanf("%c", &mostragabarito);
+		//}
+		if((mostragabarito == ' ')){
+			mostragabarito = 'n';
 		}
+
 
 		dificuldade = 0;
 		while(dificuldade <= 0 || dificuldade > 4){
@@ -78,3 +83,4 @@ int main(){
 	}
 	
 }
+
